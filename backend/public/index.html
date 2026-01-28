@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Certificate Submission</title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <h1>Certificate Verification Portal</h1>
+        <p>Submit your certificate for manual verification.</p>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="card">
+        <h2>Submit Certificate</h2>
+        <form id="submission-form">
+          <div class="form-group">
+            <label for="full_name">Full Name</label>
+            <input type="text" id="full_name" name="full_name" required />
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" required />
+          </div>
+
+          <div class="form-group">
+            <label for="civil_id">Civil ID</label>
+            <input type="text" id="civil_id" name="civil_id" required />
+          </div>
+
+          <div class="form-group">
+            <label for="certificate">Certificate (PDF or Image)</label>
+            <input
+              type="file"
+              id="certificate"
+              name="certificate"
+              accept=".pdf,.png,.jpg,.jpeg"
+              required
+            />
+          </div>
+
+          <button type="submit" class="btn primary">Submit Certificate</button>
+        </form>
+
+        <div id="form-status" class="status"></div>
+      </section>
+
+      <section class="card">
+        <h2>Check Verification Status</h2>
+        <form id="check-form">
+          <div class="form-group">
+            <label for="check_phone">Enter Your Phone Number</label>
+            <input
+              type="tel"
+              id="check_phone"
+              name="check_phone"
+              placeholder="e.g. 12345678"
+              required
+            />
+          </div>
+          <button type="submit" class="btn primary">Check Status</button>
+        </form>
+        <div id="check-result"></div>
+      </section>
+
+      <section class="helper">
+        <p>
+          Need help? Contact the verification team at
+          <a href="mailto:verify@example.com">verify@example.com</a> and share
+          your submission ID.
+        </p>
+        <a href="/dashboard" class="btn link">Go to Admin Dashboard →</a>
+      </section>
+    </main>
+
+    <script src="/js/submit.js"></script>
+  </body>
+</html>

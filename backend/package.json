@@ -1,0 +1,22 @@
+{
+  "name": "certificate-verification-backend",
+  "version": "1.0.0",
+  "description": "Certificate verification system - Kuwait Hackathon",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "multer": "^1.4.5-lts.1",
+    "better-sqlite3": "^9.0.0",
+    "tesseract.js": "^5.0.4",
+    "pdf-parse": "^1.1.1",
+    "cors": "^2.8.5",
+    "xlsx": "^0.18.5"
+  }
+}
